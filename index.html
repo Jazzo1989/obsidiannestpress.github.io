@@ -9,13 +9,30 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #0f0f0f;
+      background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: subtleMotion 15s infinite alternate ease-in-out;
       color: #f5f5f5;
     }
+    @keyframes subtleMotion {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 20px; }
+    }
     header {
-      background: linear-gradient(to right, #3f0d12, #a71d31);
+      background: rgba(63, 13, 18, 0.9);
       padding: 2rem;
       text-align: center;
+      animation: fadeInBanner 3s ease-in-out;
+    }
+    @keyframes fadeInBanner {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header img {
+      max-width: 300px;
+      margin-bottom: 1rem;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
@@ -55,7 +72,7 @@
       flex-direction: column;
       gap: 1rem;
     }
-    .buy-links a, .merch-links a {
+    .buy-links a, .merch-links a, .shopify-btn {
       background-color: #1f1f1f;
       padding: 1rem;
       color: #f5f5f5;
@@ -63,8 +80,31 @@
       border-left: 5px solid #a71d31;
       transition: 0.3s;
     }
-    .buy-links a:hover, .merch-links a:hover {
+    .buy-links a:hover, .merch-links a:hover, .shopify-btn:hover {
       background-color: #292929;
+    }
+    .merch-fake-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .merch-fake-item {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      width: 260px;
+      border-left: 5px solid #a71d31;
+    }
+    .merch-fake-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .shopify-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-align: center;
     }
     footer {
       text-align: center;
@@ -76,6 +116,7 @@
 </head>
 <body>
   <header>
+    <img src="https://via.placeholder.com/300x100.png?text=Vanta+Logo" alt="Vanta Logo">
     <h1>VANTA: Shadows Reign</h1>
     <p>A Sovereign Will Rise — Dive into the Dark Fantasy Saga</p>
     <button class="cta" onclick="document.getElementById('buy').scrollIntoView({behavior: 'smooth'})">Enter the Shadows</button>
@@ -91,20 +132,68 @@
 
     <div id="buy" class="buy-links">
       <h2>Buy the Book</h2>
-      <a href="https://www.amazon.com/dp/B0..." target="_blank">📖 Buy the eBook on Amazon</a>
-      <a href="https://www.amazon.com/dp/B0..." target="_blank">📚 Get the Paperback</a>
-      <a href="https://www.amazon.com/dp/B0..." target="_blank">📕 Grab the Hardcover</a>
+      <a href="https://a.co/d/aR0IMp0">📖 Buy the eBook on Amazon</a>
+      <a href="https://a.co/d/4ZHw08k">📚 Get the Paperback</a>
+      <a href="https://a.co/d/fBroDro">📕 Grab the Hardcover</a>
     </div>
 
     <div class="merch-links">
       <h2>Custom Merch</h2>
-      <a href="https://yourpayhiplink.com" target="_blank">✨ Shop Book Merch on Payhip</a>
-      <a href="https://yourbigcartellink.com" target="_blank">🎨 Limited Edition on BigCartel</a>
-      <a href="https://www.etsy.com/shop/yourshopname" target="_blank">🧵 Collector’s Pieces on Etsy</a>
+      <div class="merch-fake-preview">
+        <div class="merch-fake-item">
+          <img src="https://via.placeholder.com/250x150.png?text=Vanta+Tumbler" alt="Tumbler">
+          <strong>Shadow Tumbler</strong><br>
+          $15.99
+          <a href="https://yourshopifyurl.com/products/shadow-tumbler" class="shopify-btn">🛒 Add to Cart</a>
+        </div>
+        <div class="merch-fake-item">
+          <img src="https://via.placeholder.com/250x150.png?text=Custom+Bookmark" alt="Bookmark">
+          <strong>Bloodthread Bookmark</strong><br>
+          $4.99
+          <a href="https://yourshopifyurl.com/products/bloodthread-bookmark" class="shopify-btn">🛒 Add to Cart</a>
+        </div>
+        <div class="merch-fake-item">
+          <img src="https://via.placeholder.com/250x150.png?text=Signed+Print" alt="Art Print">
+          <strong>Signed Character Print</strong><br>
+          $12.00
+          <a href="https://yourshopifyurl.com/products/signed-character-print" class="shopify-btn">🛒 Add to Cart</a>
+        </div>
+      </div>
+      <br>
+      <a href="#">✨ Shop Book Merch on Payhip</a>
+      <a href="#">🎨 Limited Edition on BigCartel</a>
+      <a href="#">🧵 Collector’s Pieces on Etsy</a>
+    </div>
+  <section class="main">
+    <h2>Meet the Author</h2>
+    <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+      <img src="/mnt/data/author-photo.jpeg" alt="Author Jasmine Bradshaw" style="width: 200px; border-radius: 8px;">
+      <p style="max-width: 600px;">
+        <strong>Jasmine Bradshaw</strong> is the voice behind the shadows. An indie author, creative force, and founder of The Sibling Dynasty and Obsidian Nest Press, Jasmine weaves powerful stories of reclamation, rage, and resilience. She brings divine women to the forefront and dares you to look away. VANTA is her dark legacy—step into it.
+      </p>
+    </div>
+  
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <img src="reader_photo_3.jpeg" alt="Reader with hardcover Vanta" style="width: 100%; border-radius: 8px;">
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">“Hardcover day. She’s gorgeous in person!”</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <img src="reader_photo_4.jpeg" alt="Reader copy on couch" style="width: 100%; border-radius: 8px;">
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">“Reading throne secured. Let’s go Vanta!”</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <img src="reader_photo_1.jpeg" alt="Reader holding Vanta book" style="width: 100%; border-radius: 8px;">
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">“I had to take a pic with my queen Vanta.”</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <img src="reader_photo_2.jpeg" alt="Reader copy of Vanta book" style="width: 100%; border-radius: 8px;">
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">“A sovereign of shadows has arrived.”</p>
+      </div>
     </div>
   </section>
   <footer>
     &copy; 2025 Jasmine Bradshaw | The Sibling Dynasty / Obsidian Nest Press
+  <a href="https://www.amazon.com/author/jasminebradshaw" style="display:block; margin-top: 1rem; color:#f5f5f5; text-decoration: underline;">Visit My Amazon Author Page</a>
   </footer>
 </body>
 </html>
