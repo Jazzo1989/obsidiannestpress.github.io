@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VANTA: Shadows Reign | Official Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: subtleMotion 15s infinite alternate ease-in-out;
+      color: #f5f5f5;
+    }
+    @keyframes subtleMotion {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 20px; }
+    }
+    header {
+      background: rgba(63, 13, 18, 0.9);
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInBanner 3s ease-in-out;
+    }
+    @keyframes fadeInBanner {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header img {
+      max-width: 300px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .cta {
+      background-color: #a71d31;
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1rem;
+      color: #fff;
+      margin-top: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .main {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .main h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .main p {
+      line-height: 1.6;
+    }
+    .buy-links, .merch-links {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .buy-links a, .merch-links a, .shopify-btn {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      color: #f5f5f5;
+      text-decoration: none;
+      border-left: 5px solid #a71d31;
+      transition: 0.3s;
+    }
+    .buy-links a:hover, .merch-links a:hover, .shopify-btn:hover {
+      background-color: #292929;
+    }
+    .merch-fake-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .merch-fake-item {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      width: 260px;
+      border-left: 5px solid #a71d31;
+    }
+    .merch-fake-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .shopify-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://via.placeholder.com/300x100.png?text=Vanta+Logo" alt="Vanta Logo">
+    <h1>VANTA: Shadows Reign</h1>
+    <p>A Sovereign Will Rise — Dive into the Dark Fantasy Saga</p>
+    <button class="cta" onclick="document.getElementById('buy').scrollIntoView({behavior: 'smooth'})">Enter the Shadows</button>
+  </header>
+  <section class="main">
+    <h2>About the Book</h2>
+    <p>
+      In a realm where memory is stitched by divine threads, Jazaria Thorn—once erased by the Loom—returns as Vanta, a living glitch in the weave of fate. Her shadows do more than follow; they consume. Hunted by gods, feared by her own blood, Vanta carves a throne from the silence they forced upon her.
+    </p>
+    <p>
+      Prepare for betrayal, god-tier power, and a story that unspools with fury. If you like your fantasy dark, your sisters deadly, and your magic dripping with cosmic revenge, this saga is your next obsession.
+    </p>
+
+    <div id="buy" class="buy-links">
+      <h2>Buy the Book</h2>
+      <a href="https://a.co/d/aR0IMp0">📖 Buy the eBook on Amazon</a>
+      <a href="https://a.co/d/4ZHw08k">📚 Get the Paperback</a>
+      <a href="https://a.co/d/fBroDro">📕 Grab the Hardcover</a>
+    </div>
+
+    <div class="merch-links">
+      <h2>Custom Merch</h2>
+      <div class="merch-fake-preview">
+        <div class="merch-fake-item">
+          <img src="https://via.placeholder.com/250x150.png?text=Vanta+Tumbler" alt="Tumbler">
+          <strong>Shadow Tumbler</strong><br>
+          $15.99
+          <a href="https://yourshopifyurl.com/products/shadow-tumbler" class="shopify-btn">🛒 Add to Cart</a>
+        </div>
+        <div class="merch-fake-item">
+          <img src="https://via.placeholder.com/250x150.png?text=Custom+Bookmark" alt="Bookmark">
+          <strong>Bloodthread Bookmark</strong><br>
+          $4.99
+          <a href="https://yourshopifyurl.com/products/bloodthread-bookmark" class="shopify-btn">🛒 Add to Cart</a>
+        </div>
+        <div class="merch-fake-item">
+          <img src="https://via.placeholder.com/250x150.png?text=Signed+Print" alt="Art Print">
+          <strong>Signed Character Print</strong><br>
+          $12.00
+          <a href="https://yourshopifyurl.com/products/signed-character-print" class="shopify-btn">🛒 Add to Cart</a>
+        </div>
+      </div>
+      <br>
+      <a href="#">✨ Shop Book Merch on Payhip</a>
+      <a href="#">🎨 Limited Edition on BigCartel</a>
+      <a href="#">🧵 Collector’s Pieces on Etsy</a>
+    </div>
+  </section>
+
+  <section class="main">
+    <h2>Meet the Author</h2>
+    <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+      <img src="author_photo.jpeg" alt="Author Jasmine Bradshaw" style="width: 200px; border-radius: 8px;">
+      <p style="max-width: 600px;">
+        <strong>Jasmine Bradshaw</strong> is the voice behind the shadows. An indie author, creative force, and founder of The Sibling Dynasty and Obsidian Nest Press, Jasmine weaves powerful stories of reclamation, rage, and resilience. She brings divine women to the forefront and dares you to look away. VANTA is her dark legacy—step into it.
+      </p>
+    </div>
+  </section>
+
+  <section class="main">
+    <h2>Readers in the Shadows</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <img src="reader_photo_3.jpeg" alt="Reader with hardcover Vanta" style="width: 100%; border-radius: 8px;">
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">“Hardcover day. She’s gorgeous in person!”</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <img src="reader_photo_4.jpeg" alt="Reader copy on couch" style="width: 100%; border-radius: 8px;">
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">“Reading throne secured. Let’s go Vanta!”</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <img src="reader_photo_1.jpeg" alt="Reader holding Vanta book" style="width: 100%; border-radius: 8px;">
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">“I had to take a pic with my queen Vanta.”</p>
+      </div>
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <img src="reader_photo_2.jpeg" alt="Reader copy of Vanta book" style="width: 100%; border-radius: 8px;">
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 0.5rem;">“A sovereign of shadows has arrived.”</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Jasmine Bradshaw | The Sibling Dynasty / Obsidian Nest Press
+    <a href="https://www.amazon.com/author/jasminebradshaw" style="display:block; margin-top: 1rem; color:#f5f5f5; text-decoration: underline;">Visit My Amazon Author Page</a>
+  </footer>
+</body>
+</html>
